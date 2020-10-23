@@ -1,11 +1,33 @@
 import React from "react";
 import { render } from "react-dom";
-import "./index.css";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import AppContainer from "./containers/appContainer/appContainer";
 import * as serviceWorker from "./serviceWorker";
 
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#9e2b07",
+      light: "#d65b33",
+      dark: "#6e0000",
+    },
+    secondary: {
+      main: "#e0e0e0",
+      light: "#aeaeae",
+      dark: "#ffffff",
+    },
+  },
+  typography:{
+    fontFamily:['Ubuntu']
+  }
+});
+
 render(
-  <AppContainer/>, 
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <AppContainer />
+  </ThemeProvider>,
   document.getElementById("root")
 );
 
