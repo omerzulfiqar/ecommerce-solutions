@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "../../components/navBar/navBar";
-import ProductsGrid from "../../components/productsGrid/productsGrid";
+// import ProductsGrid from "../../components/productsGrid/productsGrid";
+import ProductPage from '../../components/productPage/productPage'
 
 export default class AppContainer extends Component {
   render() {
@@ -10,7 +11,7 @@ export default class AppContainer extends Component {
           <NavBar />
         </div>
         <div id="productsContainer">
-          <ProductsGrid />
+          <ProductPage />
         </div>
       </div>
     );
