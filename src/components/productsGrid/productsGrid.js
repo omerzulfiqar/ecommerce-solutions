@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
 import items from "../../data/data.json";
-import { Container, Typography } from "@material-ui/core";
-import opc from "../../assets/img/opc.png";
+import { Container, Typography, Button, CardActions } from "@material-ui/core";
+import opc2 from "../../assets/img/opc2.jpeg";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
+
 
 const styles = {
   paper: {
@@ -17,6 +20,9 @@ const styles = {
   container: {
     margin: "50px",
   },
+  content:{
+    backgroundColor: '#e0e0e0'
+  }
 };
 
 export default class ProductsGrid extends Component {
@@ -62,29 +68,30 @@ export default class ProductsGrid extends Component {
                   item
                   key={index}
                   xs={7}
-                  sm={5}
-                  md={3}
+                  sm={6}
+                  md={4}
+                  lg={3}
                 >
                   <Card>
                     <CardActionArea>
                       <CardMedia
                         style={{ height: 150 }}
-                        image={opc}
+                        image={opc2}
                         title={item.name}
                       />
-                      <CardContent>
+                      <CardContent style={styles.content}>
                         <Typography
                           gutterBottom
                           variant="inherit"
-                          component="h4"
-                          style={{wordWrap: "break-word"}}
+                          component="h2"
+                          style={{ wordWrap: "break-word" }}
                         >
                           {item.name}
                         </Typography>
                         <Typography
                           variant="inherit"
                           color="textSecondary"
-                          component="p"
+                          component="h3"
                         >
                           {`$${item.price}`}
                         </Typography>
