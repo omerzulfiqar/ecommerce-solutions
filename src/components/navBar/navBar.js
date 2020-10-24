@@ -39,6 +39,7 @@ const styles = {
     links: {
       color: "#ffffff",
       margin: 20,
+      textDecoration: 'none'
     },
     toolbar: {
       backgroundColor: "#d65b33",
