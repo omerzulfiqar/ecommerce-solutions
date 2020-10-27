@@ -6,8 +6,10 @@ import {
   Button,
   Grid,
 } from "@material-ui/core";
-import NYStrip from "../../assets/img/NYStrip.jpg";
+import opc2 from '../../assets/img/opc2.jpeg'
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import data from '../../data/data.json'
+import { withRouter } from "react-router-dom";
 
 const styles = {
   container: {
@@ -43,12 +45,25 @@ const quantities = [
   { value: "Pounds", label: "lbs" },
 ];
 
-export default class ProductPage extends Component {
+class ProductPage extends Component {
   state = {
     quantity: "",
     weight: "",
     customerNotes: "",
+    product : {
+      name: "",
+      price: "",
+      description: "",
+      image: ""
+    }
   };
+
+  componentDidMount(){
+    const name = this.props.match.params.name;
+    const item = data.filter(item => item.name === name);
+    // console.log(item[0]);
+    this.setState({product: item[0]})
+  }
 
   onQuantityChange = (event) => {
     this.setState({ quantity: event.target.value });
@@ -63,7 +78,8 @@ export default class ProductPage extends Component {
   };
 
   render() {
-    const { quantity, customerNotes } = this.state;
+    const { quantity, customerNotes, product } = this.state;
+    console.log(product)
     return (
       <div id="productPage" style={styles.container}>
         <Grid
@@ -72,15 +88,16 @@ export default class ProductPage extends Component {
           justify="center"
         >
           <Grid item xs={12} sm={8} md={6} style={styles.image}>
+            
             <img
-              src={NYStrip}
+              src={require(`/Users/omerzulfiqar/Dev-Life/Web-Dev-Projects/ecommerce-solutions/src/assets/img/opc2.jpeg`)}
               alt="productImage"
               style={{ maxWidth: "100%" }}
             />
           </Grid>
           <Grid item xs={12} sm={8} md={6}>
               <Typography id="name" variant="inherit" component="h1">
-                New York Strip Steak
+                {product.name}
               </Typography>
               <Typography
                 id="price"
@@ -88,7 +105,7 @@ export default class ProductPage extends Component {
                 component="h2"
                 style={{ marginTop: 15 }}
               >
-                $22
+                ${product.price}
               </Typography>
               <Typography
                 id="description"
@@ -96,9 +113,7 @@ export default class ProductPage extends Component {
                 component="p"
                 style={{ margin: "20px 0 0 0" }}
               >
-                One delectable New York Strip Steak. The New York Strip is known
-                by other names (Ambassador Steak, Kansas City strip, etc.), but
-                its marbling and tenderness deliver one result: fantastic taste.
+              {product.description}
               </Typography>
               <div style={{ display: "flex" }}>
                 <TextField
@@ -155,3 +170,5 @@ export default class ProductPage extends Component {
     );
   }
 }
+
+export default withRouter(ProductPage)

@@ -7,6 +7,7 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { IconButton, TextField, Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const styles = {
   navBar: {
@@ -39,7 +40,7 @@ const styles = {
     links: {
       color: "#ffffff",
       margin: 20,
-      textDecoration: 'none'
+      textDecoration: "none",
     },
     toolbar: {
       backgroundColor: "#d65b33",
@@ -84,9 +85,12 @@ export default class NavBar extends Component {
                 <h2>E-Commerce App</h2>
               </div>
               <div id="actionsRight">
-                <IconButton id="shoppingCartIcon" color="secondary">
-                  <ShoppingCartIcon />
-                </IconButton>
+                <Link to='/cart'>
+                  <IconButton id="shoppingCartIcon" color="secondary">
+                    <ShoppingCartIcon />
+                  </IconButton>
+                </Link>
+
                 <IconButton id="accountIcon" color="secondary">
                   <AccountCircleIcon />
                 </IconButton>
@@ -117,19 +121,18 @@ export default class NavBar extends Component {
             />
           </form>
         </div>
-        <div id='meatLinksContainer'>
+        <div id="meatLinksContainer">
           <Toolbar style={styles.meatLinks.toolbar}>
             <div id="meatLinks" style={styles.meatLinks.contatiner}>
-              {/* convert <a/> to react router links */}
-              <a href="#" style={styles.meatLinks.links}>
+              <Link style={styles.meatLinks.links} to="/chicken">
                 Chicken
-              </a>
-              <a href="#" style={styles.meatLinks.links}>
+              </Link>
+              <Link style={styles.meatLinks.links} to="/beef">
                 Beef
-              </a>
-              <a href="#" style={styles.meatLinks.links}>
+              </Link>
+              <Link style={styles.meatLinks.links} to="/lamb">
                 Lamb
-              </a>
+              </Link>
             </div>
           </Toolbar>
         </div>

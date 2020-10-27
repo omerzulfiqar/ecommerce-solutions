@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
 import items from "../../data/data.json";
-import { Container, Typography,  } from "@material-ui/core";
+import { Container, Typography } from "@material-ui/core";
 import opc2 from "../../assets/img/opc2.jpeg";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
-
+import { Link } from "react-router-dom";
+// import ProductPage from "../productPage/productPage";
 
 const styles = {
   paper: {
@@ -18,9 +19,9 @@ const styles = {
   container: {
     margin: "50px",
   },
-  content:{
-    backgroundColor: '#e0e0e0'
-  }
+  content: {
+    backgroundColor: "#e0e0e0",
+  },
 };
 
 export default class ProductsGrid extends Component {
@@ -70,32 +71,35 @@ export default class ProductsGrid extends Component {
                   md={4}
                   lg={3}
                 >
-                  <Card>
-                    <CardActionArea>
-                      <CardMedia
-                        style={{ height: 150 }}
-                        image={opc2}
-                        title={item.name}
-                      />
-                      <CardContent style={styles.content}>
-                        <Typography
-                          gutterBottom
-                          variant="inherit"
-                          component="h2"
-                          style={{ wordWrap: "break-word" }}
-                        >
-                          {item.name}
-                        </Typography>
-                        <Typography
-                          variant="inherit"
-                          color="textSecondary"
-                          component="h3"
-                        >
-                          {`$${item.price}`}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
+                  <Link to={`products/${item.name}`} style={{textDecoration:'none' }}>
+                    <Card>
+                      <CardActionArea>
+                        <CardMedia
+                          style={{ height: 150 }}
+                          image={opc2}
+                          title={item.name}
+                        />
+
+                        <CardContent style={styles.content}>
+                          <Typography
+                            gutterBottom
+                            variant="inherit"
+                            component="h2"
+                            style={{ wordWrap: "break-word", textDecoration:'none' }}
+                          >
+                            {item.name}
+                          </Typography>
+                          <Typography
+                            variant="inherit"
+                            color="textSecondary"
+                            component="h3"
+                          >
+                            {`$${item.price}`}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Link>
                 </Grid>
               ))
             )}

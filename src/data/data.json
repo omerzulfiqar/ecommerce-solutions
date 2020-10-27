@@ -1,174 +1,242 @@
 [
-  { "name": "Pancake", "price": "14.83", "quantityAvailable": 72.4 },
+  {
+    "name": "Pancake",
+    "price": "14.83",
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
+  },
   {
     "name": "Chocolate Cookies",
     "price": "12.93",
-    "quantityAvailable": 83.5
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
-  { "name": "Cream Of Tartar", "price": "9.76", "quantityAvailable": 67.8 },
+  {
+    "name": "Cream Of Tartar",
+    "price": "9.76",
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
+  },
   {
     "name": "Apple Sauce",
     "price": "4.62",
-    "quantityAvailable": 26.4
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Cheddar Cheese",
     "price": "4.79",
-    "quantityAvailable": 48.4
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "54x54 Table Cloth",
     "price": "12.74",
-    "quantityAvailable": 30.1
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
-  { "name": "Shrimp", "price": "6.37", "quantityAvailable": 58.7 },
+  {
+    "name": "Shrimp",
+    "price": "6.37",
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
+  },
   {
     "name": "Coffeecup with Lid",
     "price": "14.18",
-    "quantityAvailable": 66.0
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Primerba",
     "price": "4.93",
-    "quantityAvailable": 100.0
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Splenda Sweetener",
     "price": "7.50",
-    "quantityAvailable": 89.0
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Garam Masala",
     "price": "13.47",
-    "quantityAvailable": 36.5
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
-  { "name": "Veal - Loin", "price": "13.16", "quantityAvailable": 10.5 },
-  { "name": "Tuna - Bluefin", "price": "8.42", "quantityAvailable": 74.6 },
+  {
+    "name": "Veal - Loin",
+    "price": "13.16",
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
+  },
+  {
+    "name": "Tuna - Bluefin",
+    "price": "8.42",
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
+  },
   {
     "name": "Chivas Regal",
     "price": "13.35",
-    "quantityAvailable": 16.4
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Escargot Puff",
     "price": "9.19",
-    "quantityAvailable": 12.6
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Bleach",
     "price": "5.58",
-    "quantityAvailable": 63.4
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Fish Fillet",
     "price": "6.45",
-    "quantityAvailable": 92.3
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Mango Custard",
     "price": "12.50",
-    "quantityAvailable": 68.6
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Chipotle Seasoning",
     "price": "4.83",
-    "quantityAvailable": 88.3
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
-  { "name": "Apricot Jam", "price": "4.55", "quantityAvailable": 47.4 },
-  { "name": "Pomegranates", "price": "7.97", "quantityAvailable": 36.8 },
+  {
+    "name": "Apricot Jam",
+    "price": "4.55",
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
+  },
+  {
+    "name": "Pomegranates",
+    "price": "7.97",
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
+  },
   {
     "name": "Cannelloni",
     "price": "11.27",
-    "quantityAvailable": 21.6
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Amaretto Coffee",
     "price": "6.52",
-    "quantityAvailable": 88.6
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Veal Brisket",
     "price": "5.19",
-    "quantityAvailable": 40.1
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Mushrooms",
     "price": "10.59",
-    "quantityAvailable": 68.9
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Filo Dough",
     "price": "4.73",
-    "quantityAvailable": 28.8
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Pears",
     "price": "7.68",
-    "quantityAvailable": 34.3
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Steel Wool",
     "price": "8.52",
-    "quantityAvailable": 33.5
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Doritos",
     "price": "4.41",
-    "quantityAvailable": 30.6
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Lotus Leaves",
     "price": "5.39",
-    "quantityAvailable": 38.6
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Steel Cleaner",
     "price": "4.26",
-    "quantityAvailable": 43.4
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Fresh Eggs",
     "price": "7.68",
-    "quantityAvailable": 27.9
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Cream Of Broccoli",
     "price": "8.35",
-    "quantityAvailable": 42.1
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Hazelnut Creamer",
     "price": "2.50",
-    "quantityAvailable": 25.6
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Prunes",
     "price": "5.82",
-    "quantityAvailable": 31.9
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Procutinni",
     "price": "7.87",
-    "quantityAvailable": 37.8
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Apple Juice",
     "price": "4.06",
-    "quantityAvailable": 22.9
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Cranberry Juice",
     "price": "2.81",
-    "quantityAvailable": 43.3
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Dish Towel",
     "price": "4.34",
-    "quantityAvailable": 32.4
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   },
   {
     "name": "Oven Mitts",
     "price": "4.26",
-    "quantityAvailable": 45.1
+    "description": "This is a product",
+    "image": "../../assets/img/opc2.jpeg"
   }
 ]
