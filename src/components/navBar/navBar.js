@@ -50,6 +50,10 @@ const styles = {
       margin: "0px auto",
     },
   },
+  title: {
+    textDecoration: "none",
+    color: "#fff",
+  },
 };
 
 export default class NavBar extends Component {
@@ -82,15 +86,16 @@ export default class NavBar extends Component {
                 </IconButton>
               </div>
               <div id="title" style={styles.navBar}>
-                <h2>E-Commerce App</h2>
+                <Link to="/" style={styles.title}>
+                  <h2>E-Commerce App</h2>
+                </Link>
               </div>
               <div id="actionsRight">
-                <Link to='/cart'>
+                <Link to="/cart">
                   <IconButton id="shoppingCartIcon" color="secondary">
                     <ShoppingCartIcon />
                   </IconButton>
                 </Link>
-
                 <IconButton id="accountIcon" color="secondary">
                   <AccountCircleIcon />
                 </IconButton>
@@ -132,6 +137,9 @@ export default class NavBar extends Component {
               </Link>
               <Link style={styles.meatLinks.links} to="/lamb">
                 Lamb
+              </Link>
+              <Link style={styles.meatLinks.links} to="/products">
+                All
               </Link>
             </div>
           </Toolbar>

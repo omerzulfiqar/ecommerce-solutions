@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
 import items from "../../data/data.json";
 import { Container, Typography } from "@material-ui/core";
-import opc2 from "../../assets/img/opc2.jpeg";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
 import { Link } from "react-router-dom";
-// import ProductPage from "../productPage/productPage";
 
 const styles = {
   paper: {
@@ -76,7 +74,7 @@ export default class ProductsGrid extends Component {
                       <CardActionArea>
                         <CardMedia
                           style={{ height: 150 }}
-                          image={opc2}
+                          image={process.env.PUBLIC_URL + item.image}
                           title={item.name}
                         />
 

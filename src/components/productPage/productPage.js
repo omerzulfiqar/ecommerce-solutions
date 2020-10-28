@@ -6,9 +6,8 @@ import {
   Button,
   Grid,
 } from "@material-ui/core";
-import opc2 from '../../assets/img/opc2.jpeg'
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import data from '../../data/data.json'
+import data from "../../data/data.json";
 import { withRouter } from "react-router-dom";
 
 const styles = {
@@ -17,7 +16,7 @@ const styles = {
     padding: "1% 4%",
   },
   image: {
-    textAlign: "center"
+    textAlign: "center",
   },
   productDetails: {
     display: "block",
@@ -36,7 +35,7 @@ const styles = {
     marginTop: 20,
     backgroundColor: "#00695c",
     color: "white",
-    fontWeight: 'bold'
+    fontWeight: "bold",
   },
 };
 
@@ -50,19 +49,19 @@ class ProductPage extends Component {
     quantity: "",
     weight: "",
     customerNotes: "",
-    product : {
+    product: {
       name: "",
       price: "",
       description: "",
-      image: ""
-    }
+      image: "",
+    },
   };
 
-  componentDidMount(){
+  componentDidMount() {
     const name = this.props.match.params.name;
-    const item = data.filter(item => item.name === name);
-    // console.log(item[0]);
-    this.setState({product: item[0]})
+    const item = data.filter((item) => item.name === name);
+    console.log(item[0]);
+    this.setState({ product: item[0] });
   }
 
   onQuantityChange = (event) => {
@@ -79,91 +78,87 @@ class ProductPage extends Component {
 
   render() {
     const { quantity, customerNotes, product } = this.state;
-    console.log(product)
+    const image = product.image;
+    console.log(image);
     return (
       <div id="productPage" style={styles.container}>
-        <Grid
-          container
-          spacing={1}
-          justify="center"
-        >
+        <Grid container spacing={1} justify="center">
           <Grid item xs={12} sm={8} md={6} style={styles.image}>
-            
             <img
-              src={require(`/Users/omerzulfiqar/Dev-Life/Web-Dev-Projects/ecommerce-solutions/src/assets/img/opc2.jpeg`)}
+              src={process.env.PUBLIC_URL + product.image}
               alt="productImage"
               style={{ maxWidth: "100%" }}
             />
           </Grid>
           <Grid item xs={12} sm={8} md={6}>
-              <Typography id="name" variant="inherit" component="h1">
-                {product.name}
-              </Typography>
-              <Typography
-                id="price"
-                variant="inherit"
-                component="h2"
-                style={{ marginTop: 15 }}
-              >
-                ${product.price}
-              </Typography>
-              <Typography
-                id="description"
-                variant="inherit"
-                component="p"
-                style={{ margin: "20px 0 0 0" }}
-              >
+            <Typography id="name" variant="inherit" component="h1">
+              {product.name}
+            </Typography>
+            <Typography
+              id="price"
+              variant="inherit"
+              component="h2"
+              style={{ marginTop: 15 }}
+            >
+              ${product.price}
+            </Typography>
+            <Typography
+              id="description"
+              variant="inherit"
+              component="p"
+              style={{ margin: "20px 0 0 0" }}
+            >
               {product.description}
-              </Typography>
-              <div style={{ display: "flex" }}>
-                <TextField
-                  id="quantity"
-                  variant="outlined"
-                  margin="dense"
-                  label="Weight"
-                  onChange={(event) => this.onWeightChange(event)}
-                  required
-                  placeholder="Enter quantity"
-                  style={styles.select}
-                />
-                <TextField
-                  id="quantityUnits"
-                  select
-                  required
-                  label="Unit"
-                  value={quantity}
-                  onChange={(event) => this.onQuantityChange(event)}
-                  variant="outlined"
-                  margin="dense"
-                  style={styles.select}
-                >
-                  {quantities.map((option) => (
-                    <MenuItem key={option.value} value={option.value}>
-                      {option.label}
-                    </MenuItem>
-                  ))}
-                </TextField>
-              </div>
+            </Typography>
+            <div style={{ display: "flex" }}>
               <TextField
-                id="customer-requirement-form"
-                label="Notes"
-                multiline
-                rows={4}
-                value={customerNotes}
+                id="quantity"
                 variant="outlined"
-                onChange={(event) => this.onNotesChange(event)}
-                placeholder="Please enter any requirements or instructions you would like us to follow"
-                style={styles.form}
+                margin="dense"
+                label="Weight"
+                onChange={(event) => this.onWeightChange(event)}
+                required
+                placeholder="Enter quantity"
+                style={styles.select}
               />
-              <Button
-                id="addToCartBtn"
-                variant="contained"
-                startIcon={<ShoppingCartIcon />}
-                fullWidth
-                style={styles.addBtn}
+              <TextField
+                id="quantityUnits"
+                select
+                required
+                label="Unit"
+                value={quantity}
+                onChange={(event) => this.onQuantityChange(event)}
+                variant="outlined"
+                margin="dense"
+                style={styles.select}
               >
-                Add To Cart
-              </Button>
+                {quantities.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </div>
+            <TextField
+              id="customer-requirement-form"
+              label="Notes"
+              multiline
+              rows={4}
+              value={customerNotes}
+              variant="outlined"
+              onChange={(event) => this.onNotesChange(event)}
+              placeholder="Please enter any requirements or instructions you would like us to follow"
+              style={styles.form}
+            />
+            <Button
+              id="addToCartBtn"
+              variant="contained"
+              startIcon={<ShoppingCartIcon />}
+              fullWidth
+              style={styles.addBtn}
+            >
+              Add To Cart
+            </Button>
           </Grid>
         </Grid>
       </div>
@@ -171,4 +166,4 @@ class ProductPage extends Component {
   }
 }
 
-export default withRouter(ProductPage)
+export default withRouter(ProductPage);
