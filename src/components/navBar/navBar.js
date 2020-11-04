@@ -6,7 +6,7 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import { IconButton, TextField, Button } from "@material-ui/core";
+import { IconButton, TextField, Button, Badge } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const styles = {
@@ -93,7 +93,9 @@ export default class NavBar extends Component {
               <div id="actionsRight">
                 <Link to="/cart">
                   <IconButton id="shoppingCartIcon" color="secondary">
+                    <Badge badgeContent={3} color='secondary'>
                     <ShoppingCartIcon />
+                    </Badge>
                   </IconButton>
                 </Link>
                 <IconButton id="accountIcon" color="secondary">

@@ -50,6 +50,7 @@ class ProductPage extends Component {
     weight: "",
     customerNotes: "",
     product: {
+      id: "",
       name: "",
       price: "",
       description: "",
@@ -76,6 +77,12 @@ class ProductPage extends Component {
     this.setState({ customerNotes: event.target.value });
   };
 
+  onAddToCart = (product) => {
+    // Send id to cart API
+    // Add item to cart API
+    // increment cart badge
+  }
+
   render() {
     const { quantity, customerNotes, product } = this.state;
     const image = product.image;
@@ -85,9 +92,9 @@ class ProductPage extends Component {
         <Grid container spacing={1} justify="center">
           <Grid item xs={12} sm={8} md={6} style={styles.image}>
             <img
-              src={process.env.PUBLIC_URL + product.image}
+              src={process.env.PUBLIC_URL + product.imageLg}
               alt="productImage"
-              style={{ maxWidth: "100%" }}
+              style={{ maxWidth: "100%", border: "2px solid black" }}
             />
           </Grid>
           <Grid item xs={12} sm={8} md={6}>
