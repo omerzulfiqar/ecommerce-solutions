@@ -2,8 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "E-commerce Solutions Server Code",
-  "main": "index.js",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
+    "dev": "nodemon ./server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/omerzulfiqar/ecommerce-solutions/issues"
   },
-  "homepage": "https://github.com/omerzulfiqar/ecommerce-solutions#readme"
+  "homepage": "https://github.com/omerzulfiqar/ecommerce-solutions#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "pug": "^3.0.0"
+  }
 }
