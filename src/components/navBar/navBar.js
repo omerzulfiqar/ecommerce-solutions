@@ -19,7 +19,7 @@ const styles = {
     visible: {
       display: "block",
       padding: "0px 20px",
-      backgroundColor: "#9e2b07",
+      backgroundColor: "#689cd1",
     },
     hidden: {
       display: "none",
@@ -27,7 +27,7 @@ const styles = {
     btn: {
       marginTop: 8,
       marginBottom: 4,
-      color: "#9e2b07",
+      color: "#004371",
       borderRadius: 4,
     },
     bar: {
@@ -43,7 +43,7 @@ const styles = {
       textDecoration: "none",
     },
     toolbar: {
-      backgroundColor: "#d65b33",
+      backgroundColor: "#346ea0",
       minHeight: 25,
     },
     contatiner: {
@@ -70,7 +70,7 @@ export default class NavBar extends Component {
     return (
       <div id="NavAndSearch">
         <div id="navBar">
-          <AppBar position="static">
+          <AppBar position="static" style={{backgroundColor: "#004371",}}>
             <Toolbar>
               <div id="actionsLeft">
                 {/* <span id="zipcode">22042</span> */}

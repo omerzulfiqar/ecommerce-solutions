@@ -5,6 +5,7 @@ import ProductsGrid from "../../components/productsGrid/productsGrid";
 import ProductPage from "../../components/productPage/productPage";
 import CartPage from '../../components/cartPage/cartPage'
 import Home from '../../components/homePage/home'
+import CheckoutPage from '../../components/checkoutPage/checkoutPage'
 
 export default class AppContainer extends Component {
   render() {
@@ -17,6 +18,7 @@ export default class AppContainer extends Component {
             <Route path="/products" exact component={ProductsGrid} />
             <Route path="/products/:name" component={ProductPage} />
             <Route path='/cart' component={CartPage}/>
+            <Route path='/checkout' component={CheckoutPage}/>
           </Switch>
         </div>
       </Router>

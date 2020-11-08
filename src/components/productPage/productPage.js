@@ -61,7 +61,6 @@ class ProductPage extends Component {
   componentDidMount() {
     const name = this.props.match.params.name;
     const item = data.filter((item) => item.name === name);
-    console.log(item[0]);
     this.setState({ product: item[0] });
   }
 
@@ -77,16 +76,14 @@ class ProductPage extends Component {
     this.setState({ customerNotes: event.target.value });
   };
 
-  onAddToCart = (product) => {
-    // Send id to cart API
-    // Add item to cart API
-    // increment cart badge
+  async addToCart(id, quantity) {
+    // Add data to cart api
+    // Get The name, price and any special instructions
+    console.log(`Adding ${id} to cart`)
   }
 
   render() {
     const { quantity, customerNotes, product } = this.state;
-    const image = product.image;
-    console.log(image);
     return (
       <div id="productPage" style={styles.container}>
         <Grid container spacing={1} justify="center">
@@ -163,6 +160,7 @@ class ProductPage extends Component {
               startIcon={<ShoppingCartIcon />}
               fullWidth
               style={styles.addBtn}
+              onClick={() => this.addToCart(product.id, quantity)}
             >
               Add To Cart
             </Button>

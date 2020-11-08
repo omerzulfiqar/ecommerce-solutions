@@ -7,7 +7,9 @@ import {
   TableRow,
   TableHead,
   Select,
+  Button,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const styles = {
   container: {
@@ -61,15 +63,10 @@ export default class CartPage extends Component {
     let total = 0;
     const items = data.slice(0, 3);
     items.forEach((item) => {
-      total += (parseFloat(item.price) * parseFloat(item.quantity));
+      total += parseFloat(item.price) * parseFloat(item.quantity);
     });
-    this.setState({ subtotal: total.toFixed(2)});
+    this.setState({ subtotal: total.toFixed(2) });
   };
-
-  async addToCart(id, quantity) {
-    // Add data to cart api
-    // Get The name, price and any special instructions
-  }
 
   async removeFromCart(id, quantity) {
     // Remove data from cart api
@@ -79,9 +76,8 @@ export default class CartPage extends Component {
     let items = this.state.products;
     items[index].quantity = newQuantity;
     this.setState({ products: items });
-    this.calculateTotal()
+    this.calculateTotal();
   };
-
 
   render() {
     const { products, subtotal } = this.state;
@@ -138,7 +134,10 @@ export default class CartPage extends Component {
                   </Select>
                 </TableCell>
                 <TableCell style={styles.tableCell} align="left" id="itemPrice">
-                  ${(parseFloat(item.price) * parseFloat(item.quantity)).toFixed(2)}
+                  $
+                  {(parseFloat(item.price) * parseFloat(item.quantity)).toFixed(
+                    2
+                  )}
                 </TableCell>
               </TableRow>
             ))}
@@ -158,6 +157,9 @@ export default class CartPage extends Component {
             </TableRow>
           </TableBody>
         </Table>
+        <Link to={`checkout/${products}`} style={{ textDecoration: "none" }}>
+          <Button variant="contained">Continue To Checkout</Button>
+        </Link>
       </div>
     );
   }
