@@ -1,6 +1,6 @@
-import express from 'express'
-import http from 'http'
-import app from '../app.js'
+import express from "express";
+import http from "http";
+import app from "../app.js";
 
 /**
  * Simple logger function.
@@ -8,6 +8,7 @@ import app from '../app.js'
 function log(message) {
   process.stdout.write(`${message}\n`);
 }
+
 /**
  * Normalize a port into a number, string, or false.
  */
@@ -23,6 +24,7 @@ function normalizePort(val) {
   }
   return false;
 }
+
 /**
  * Get port from environment and store in Express.
  */
