@@ -21,7 +21,7 @@ router.get("/:productId", async (req, res) => {
   res.status(200).json({
     message: `Getting Product #${
       req.params.productId
-    }!`,
+    }`,
     id: req.params.productId,
   });
 });
