@@ -23,15 +23,17 @@ router.get("/:orderId", async (req, res) => {
 /**
  * CREATE A NEW ORDER
  */
-router.post("/:orderId", async (req, res) => {
-  res.status(201).json({
-    message: `New Order #${req.body.id} Created!`,
+router.post("/", async (req, res) => {
+  const newOrder = {
     id: req.body.id,
     name: req.body.name,
     phone: req.body.phone,
     items: req.body.items,
     notes: req.body.notes,
     totalPrice: req.body.total
+  }
+  res.status(201).json({
+    message: `New Order #${req.body.id} for ${req.body.name} Created!`,
   });
 });
 

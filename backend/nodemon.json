@@ -1,0 +1,6 @@
+{
+  "env": {
+    "MONGOATLAS_PWD": "omer123",
+    "MONGOATLAS_NAME": "E-Commerce-Data"
+  }
+}
